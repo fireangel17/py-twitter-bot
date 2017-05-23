@@ -10,9 +10,13 @@ from tweet_text import idle_text , reply
 
 
 class TestTweetText(unittest.TestCase):
-	def test_math(self):
-		response = reply({'text':'1+1', 'user': {'screen_name': 'TestUser'}})
-		self.assertTrue("2" in response)
+        def test_math(self):
+                response = reply({'text':'1+1', 'user': {'screen_name': 'TestUser'}})
+                self.assertTrue("2" in response)
+
+        def test_Pokemon(self):
+                response = reply({'text': '#1', 'user': {'screen_name': 'TestUser'}})
+                self.assertTrue( "Bulbasaur" in response)
      #This is called immediately before calling each test method
   # def setUp(self):
         #self.text = idle_text()

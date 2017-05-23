@@ -14,8 +14,10 @@ def reply(tweet):
         berlin_time = datetime.now(timezone('Europe/Berlin'))
         date = berlin_time.strftime("It is %H:%M:%S on a %A (%d-%m-%Y).")
         return "Hi @" + user + "! " + date
-    if '1+1' in message.lower():
+    if '1+1' in message:
         return "2"
+    if '#1' in message:
+        return "Bulbasaur"
     return None
 
 def idle_text():
